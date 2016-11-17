@@ -62,15 +62,6 @@ public class CityDOA extends ConnectDB{
                 + "   AND temp.city_code=city.city_code"
                 + "   WHERE city.name IS NULL"
                 + "   );"
-                + "DELETE FROM city"
-                + "WHERE city.country_code IN"
-                + "  (SELECT city.country_code"
-                + "   FROM city"
-                + "   LEFT OUTER JOIN temp"
-                + "   ON city.country_code=temp.country_code"
-                + "   AND city.city_code=temp.city_code"
-                + "   WHERE temp.name IS NULL"
-                + "   );"
                 + "DROP TABLE temp;"
         );
         st.close();

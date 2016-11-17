@@ -62,13 +62,6 @@ public class CountryDOA extends ConnectDB {
                 "   ON temp.code=country.code" +
                 "   WHERE country.code IS NULL" +
                 "   );" +
-                "   DELETE FROM country" +
-                "   WHERE country.code IN" +
-                "   (SELECT country.code" +
-                "   FROM country" +
-                "   LEFT OUTER JOIN temp" +
-                "   ON country.code=temp.code" +
-                "   WHERE temp.code IS NULL);" +
                 "DROP TABLE temp;"
         );
         st.close();

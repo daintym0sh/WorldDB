@@ -48,13 +48,6 @@ public class DemogrDOA extends ConnectDB {
                 "   ON temp.code=" + type + ".country_code" +
                 "   WHERE " + type + ".country_code IS NULL" +
                 "   );" +
-                "   DELETE FROM " + type +
-                "   WHERE " + type + ".country_code IN" +
-                "   (SELECT " + type + ".country_code" +
-                "   FROM " + type +
-                "   LEFT OUTER JOIN temp" +
-                "   ON " + type + ".country_code=temp.code" +
-                "   WHERE temp.code IS NULL);" +
                 "DROP TABLE temp;"
         );
         st.close();

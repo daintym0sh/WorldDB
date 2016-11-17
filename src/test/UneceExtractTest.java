@@ -2,6 +2,8 @@ package test;
 
 import main.datasources.unece.UneceCity;
 import main.datasources.unece.UneceExtract;
+import main.datasources.worldbank.WorldBankData;
+
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.List;

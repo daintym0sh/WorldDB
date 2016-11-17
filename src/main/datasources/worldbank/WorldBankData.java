@@ -1,25 +1,21 @@
-package main.datasources.worldbank;/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package main.datasources.worldbank;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class WorldBankData extends WorldBankCountry {
-    
+public class WorldBankData {
+
     private WorldBankCountry country;
     private String code_a2;
-    @XmlElement(name="date")
+    @XmlElement(name = "date")
     private int date;
-    @XmlElement(name="value")
+    @XmlElement(name = "value")
     private double value;
 
     public String getCode_a2() {
-        code_a2=country.getCode_a2();
+        code_a2 = country.getCode_a2();
         return code_a2;
     }
 
@@ -30,5 +26,4 @@ public class WorldBankData extends WorldBankCountry {
     public double getValue() {
         return value;
     }
-    
 }
