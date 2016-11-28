@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88b7d76f-1344-4ef1-ad82-c1c281f9b7c7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_guava_guava_19_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_opencsv_opencsv_3_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/org_jsoup_jsoup_1_10_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/org_postgresql_postgresql_9_4_1212.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/doa/CityDOA.java" afterPath="$PROJECT_DIR$/src/main/dao/CityDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/doa/ConnectDB.java" afterPath="$PROJECT_DIR$/src/main/dao/ConnectDB.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/doa/ContinentDOA.java" afterPath="$PROJECT_DIR$/src/main/dao/ContinentDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/doa/CountryDOA.java" afterPath="$PROJECT_DIR$/src/main/dao/CountryDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/doa/DemogrDOA.java" afterPath="$PROJECT_DIR$/src/main/dao/DemogrDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/doa/EconomyDOA.java" afterPath="$PROJECT_DIR$/src/main/dao/EconomyDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/doa/EthnicityDOA.java" afterPath="$PROJECT_DIR$/src/main/dao/EthnicityDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/doa/LanguageDOA.java" afterPath="$PROJECT_DIR$/src/main/dao/LanguageDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/doa/NeighborsDOA.java" afterPath="$PROJECT_DIR$/src/main/dao/NeighborsDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/doa/PopulationDOA.java" afterPath="$PROJECT_DIR$/src/main/dao/PopulationDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/doa/ReligionDOA.java" afterPath="$PROJECT_DIR$/src/main/dao/ReligionDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WorldDB/main/Runner.class" afterPath="$PROJECT_DIR$/out/production/WorldDB/main/Runner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WorldDB/main/datasources/geonames/GeoInfoCountry.class" afterPath="$PROJECT_DIR$/out/production/WorldDB/main/datasources/geonames/GeoInfoCountry.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WorldDB/main/doa/ContinentDOA.class" afterPath="$PROJECT_DIR$/out/production/WorldDB/main/doa/ContinentDOA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WorldDB/main/domain/CountryBuild.class" afterPath="$PROJECT_DIR$/out/production/WorldDB/main/domain/CountryBuild.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorldDB.iml" afterPath="$PROJECT_DIR$/WorldDB.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Runner.java" afterPath="$PROJECT_DIR$/src/main/Runner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/datasources/geonames/GeoInfoCountry.java" afterPath="$PROJECT_DIR$/src/main/datasources/geonames/GeoInfoCountry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/domain/CountryBuild.java" afterPath="$PROJECT_DIR$/src/main/domain/CountryBuild.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,11 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FactbookExtract.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FactbookExtract.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/datasources/factbook/FactbookExtract.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
               <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountryBuild.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/domain/CountryBuild.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="53" column="114" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="114" />
               <folding />
             </state>
           </provider>
@@ -178,11 +161,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="datasources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="worldbank" />
+              <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -205,84 +184,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="datasources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unece" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WorldDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WorldDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="datasources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geonames" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WorldDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WorldDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="datasources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="factbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WorldDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WorldDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -721,15 +622,15 @@
       <option name="presentableId" value="Default" />
       <updated>1480182915222</updated>
       <workItem from="1480182919048" duration="1495000" />
-      <workItem from="1480301599629" duration="2166000" />
+      <workItem from="1480301599629" duration="3689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3661000" />
+    <option name="totallyTimeSpent" value="5184000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1448" height="864" extended-state="1" />
+    <frame x="-4" y="-4" width="1448" height="864" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -746,7 +647,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27847221" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27847221" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -863,6 +764,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/domain/CountryBuild.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="53" column="114" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="114" />
           <folding />
         </state>
       </provider>
