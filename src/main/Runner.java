@@ -1,6 +1,6 @@
 package main;
 
-import main.doa.*;
+import main.dao.*;
 import main.domain.Country;
 import main.domain.CountryBuild;
 import org.xml.sax.SAXException;
@@ -11,35 +11,38 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-public class Runner {
+public class Runner{
     public static void main(String[] args) throws SQLException, ParserConfigurationException, JAXBException, SAXException, IOException, ClassNotFoundException {
         List<Country> countries = new CountryBuild().extractCountry();
-        /*CountryDOA countryDoa = new CountryDOA();
-        countryDoa.connect();
-        countryDoa.countryUpdate(countries);
-        EthnicityDOA ethnicityDOA = new EthnicityDOA();
-        ethnicityDOA.connect();
-        ethnicityDOA.ethnicityUpdate(countries);
-        LanguageDOA languageDOA = new LanguageDOA();
-        languageDOA.connect();
-        languageDOA.ethnicityUpdate(countries);
-        ReligionDOA religionDOA = new ReligionDOA();
-        religionDOA.connect();
-        religionDOA.religionUpdate(countries);*/
-        //CityDOA cityDOA = new CityDOA();
-        //cityDOA.connect();
-        //cityDOA.cityUpdate(countries);
-        //EconomyDOA economyDOA = new EconomyDOA();
-        //economyDOA.connect();
-        //economyDOA.economyUpdate(countries);
-        //PopulationDOA populationDOA = new PopulationDOA();
-        //populationDOA.connect();
-        //populationDOA.PopulationUpdate(countries);
-        //NeighborsDOA neighborsDOA = new NeighborsDOA();
-        //neighborsDOA.connect();
-        //neighborsDOA.NeighborsUpdate(countries);
-        ContinentDOA continentDOA = new ContinentDOA();
-        continentDOA.connect();
-        continentDOA.continentUpdate(countries);
+        CountryDAO countrydao = new CountryDAO();
+        countrydao.connect();
+        countrydao.countryUpdate(countries);
+        EthnicityDAO ethnicitydao = new EthnicityDAO();
+        ethnicitydao.connect();
+        ethnicitydao.ethnicityUpdate(countries);
+        LanguageDAO languagedao = new LanguageDAO();
+        languagedao.connect();
+        languagedao.ethnicityUpdate(countries);
+        ReligionDAO religiondao = new ReligionDAO();
+        religiondao.connect();
+        religiondao.religionUpdate(countries);
+        CityDAO cityDAO = new CityDAO();
+        cityDAO.connect();
+        cityDAO.cityUpdate(countries);
+        EconomyDAO economydao = new EconomyDAO();
+        economydao.connect();
+        economydao.economyUpdate(countries);
+        PopulationDAO populationdao = new PopulationDAO();
+        populationdao.connect();
+        populationdao.PopulationUpdate(countries);
+        NeighborsDAO neighborsdao = new NeighborsDAO();
+        neighborsdao.connect();
+        neighborsdao.NeighborsUpdate(countries);
+        ContinentDAO continentdao = new ContinentDAO();
+        continentdao.connect();
+        continentdao.continentUpdate(countries);
+        CurrencyDAO currencyDAO = new CurrencyDAO();
+        currencyDAO.connect();
+        currencyDAO.currencyUpdate(countries);
     }
 }

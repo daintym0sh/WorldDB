@@ -1,11 +1,11 @@
-package main.doa;
+package main.dao;
 
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
 
-public class DemogrDOA extends ConnectDB {
+public class DemogrDAO extends ConnectDB {
     public void demographicTemp() throws SQLException {
         Statement st = conn.createStatement();
         st.execute("CREATE TABLE temp(" +

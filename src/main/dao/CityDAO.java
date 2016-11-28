@@ -1,4 +1,4 @@
-package main.doa;
+package main.dao;
 
 import main.datasources.unece.UneceCity;
 import main.domain.Country;
@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by John on 11/15/2016.
  */
-public class CityDOA extends ConnectDB{
+public class CityDAO extends ConnectDB{
 
     public void cityUpdate(List<Country> countries) throws SQLException {
         Statement st = conn.createStatement();

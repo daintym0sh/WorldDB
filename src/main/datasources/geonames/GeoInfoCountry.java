@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class GeoInfoCountry {
     
     @XmlElement(name="countryName")
-    private String country_name;    
+    private String country_name;
     @XmlElement(name="countryCode")
     private String code_a2;    
     @XmlElement(name="isoAlpha3")
@@ -25,7 +25,9 @@ public class GeoInfoCountry {
     private String fips;
     @XmlElement(name="continentName")
     private String continent;
-    
+    @XmlElement(name="currencyCode")
+    private String currency;
+
     public String getCountry_name() {
         return country_name;
     }
@@ -57,4 +59,9 @@ public class GeoInfoCountry {
     public String getContinent() {
         return continent;
     }
+
+    public String getCurrency() {
+        return currency;
+    }
 }
+

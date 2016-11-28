@@ -43,12 +43,12 @@ public class CountryBuild {
     public ArrayList<Country> extractCountry() throws JAXBException, IOException {
         countryData = new GeoInfoExtract().extractInfo();
         loc = new FactbookExtract("data/factbook/fields/2011.html");
-        //cities = new UneceExtract().extractCity();
+        cities = new UneceExtract().extractCity();
         ethn = new FactbookExtract("data/factbook/fields/2075.html");
         lang = new FactbookExtract("data/factbook/fields/2098.html");
         rel = new FactbookExtract("data/factbook/fields/2122.html");
-        population = new WorldBankExtract("http://api.worldbank.org/countries/all/indicators/SP.POP.TOTL?format=xml&per_page=20000").extractData();
-        growth = new WorldBankExtract("http://api.worldbank.org/countries/all/indicators/SP.POP.GROW?format=xml&per_page=20000").extractData();
+        population = new WorldBankExtract("http://api.worldbank.org/countries/all/indicators/SP.POP.TOTL?format=xml").extractData();
+        growth = new WorldBankExtract("http://api.worldbank.org/countries/all/indicators/SP.POP.GROW?format=xml").extractData();
         mortality = new WorldBankExtract("http://api.worldbank.org/countries/all/indicators/SP.DYN.CDRT.IN?format=xml&per_page=20000").extractData();
         infl = new WorldBankExtract("http://api.worldbank.org/countries/all/indicators/NY.GDP.DEFL.KD.ZG?format=xml").extractData();
         unempl = new WorldBankExtract("http://api.worldbank.org/countries/all/indicators/SL.UEM.TOTL.ZS?format=xml").extractData();
@@ -62,7 +62,7 @@ public class CountryBuild {
             String code_a2 = info.getCode_a2();
             String fips = info.getFips();
             String[] location = loc.extractCountryLoc(fips);
-            //List<UneceCity> c = cities.stream().filter(uneceCity -> uneceCity.getCode_a2().contains(code_a2)).collect(Collectors.toList());
+            List<UneceCity> c = cities.stream().filter(uneceCity -> uneceCity.getCode_a2().contains(code_a2)).collect(Collectors.toList());
             neighbors = new GeoNeighborExtract().extractNeighbor(code_a2);
             demographicData = new CountryDemogr(
                     ethn.extractDemogr(fips),

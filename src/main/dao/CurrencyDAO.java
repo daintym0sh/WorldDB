@@ -1,4 +1,4 @@
-package main.doa;
+package main.dao;
 
 import main.domain.Country;
 import org.xml.sax.SAXException;
@@ -11,22 +11,21 @@ import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
 
-public class ContinentDOA extends ConnectDB {
-
-    public void continentUpdate(List<Country> countries) throws ParserConfigurationException, SAXException, IOException, JAXBException, SQLException {
+public class CurrencyDAO extends ConnectDB{
+    public void currencyUpdate(List<Country> countries) throws ParserConfigurationException, SAXException, IOException, JAXBException, SQLException {
         Statement st = conn.createStatement();
         st.execute("CREATE TABLE temp ("
                 + "country_code character varying PRIMARY KEY,"
-                + "name character varying"
+                + "currency character varying"
                 + ");"
         );
         Iterator<Country> it = countries.iterator();
         while(it.hasNext()){
             Country c = it.next();
-            String name = c.getInfo().getContinent();
+            String name = c.getInfo().getCurrency();
             st.execute("INSERT INTO temp ("
                     + "country_code,"
-                    + "name"
+                    + "currency"
                     + ")"
                     + "VALUES ("
                     + "'" + c.getInfo().getCode_a2() + "',"
@@ -34,12 +33,12 @@ public class ContinentDOA extends ConnectDB {
                     + ");"
             );
         }
-        st.execute("INSERT INTO continent" +
-                "  (SELECT temp.country_code,temp.name" +
+        st.execute("INSERT INTO currency" +
+                "  (SELECT temp.country_code,temp.currency" +
                 "   FROM temp" +
-                "   LEFT OUTER JOIN continent" +
-                "   ON temp.country_code=continent.country_code" +
-                "   WHERE continent.country_code IS NULL" +
+                "   LEFT OUTER JOIN currency" +
+                "   ON temp.country_code=currency.country_code" +
+                "   WHERE currency.country_code IS NULL" +
                 "   );" +
                 "DROP TABLE temp;"
         );

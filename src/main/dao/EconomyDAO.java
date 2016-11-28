@@ -1,4 +1,4 @@
-package main.doa;
+package main.dao;
 
 
 import main.datasources.worldbank.WorldBankData;
@@ -13,7 +13,7 @@ import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
 
-public class EconomyDOA extends ConnectDB {
+public class EconomyDAO extends ConnectDB {
     public void economyUpdate(List<Country> countries) throws ParserConfigurationException, SAXException, IOException, JAXBException, SQLException {
         Statement st = conn.createStatement();
         st.execute("CREATE TABLE temp ("

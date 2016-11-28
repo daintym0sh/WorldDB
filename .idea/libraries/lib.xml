@@ -1,12 +1,15 @@
 <component name="libraryTable">
-  <library name="com.opencsv:opencsv:3.8" type="repository">
-    <properties maven-id="com.opencsv:opencsv:3.8" />
+  <library name="lib">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/opencsv-3.8.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/commons-beanutils-1.9.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsoup-1.10.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/guava-19.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-beanutils-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/postgresql-9.4.1209.jre6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/postgresql-9.4.1212.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

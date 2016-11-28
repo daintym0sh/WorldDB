@@ -1,4 +1,4 @@
-package main.doa;
+package main.dao;
 
 import main.domain.Country;
 
@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.List;
 
-public class ReligionDOA extends DemogrDOA{
+public class ReligionDAO extends DemogrDAO {
     private String type = "religion";
     public void religionUpdate(List<Country> countries) throws SQLException {
         demographicTemp();

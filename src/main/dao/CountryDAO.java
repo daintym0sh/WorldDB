@@ -1,4 +1,4 @@
-package main.doa;
+package main.dao;
 
 import main.domain.Country;
 import org.xml.sax.SAXException;
@@ -11,7 +11,7 @@ import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
 
-public class CountryDOA extends ConnectDB {
+public class CountryDAO extends ConnectDB {
 
     public void countryUpdate(List<Country> countries) throws ParserConfigurationException, SAXException, IOException, JAXBException, SQLException {
         Statement st = conn.createStatement();

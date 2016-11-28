@@ -1,6 +1,5 @@
-package main.doa;
+package main.dao;
 
-import main.datasources.geonames.GeoInfoCountry;
 import main.datasources.geonames.GeoNeighborCountry;
 import main.domain.Country;
 
@@ -9,7 +8,7 @@ import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
 
-public class NeighborsDOA extends ConnectDB{
+public class NeighborsDAO extends ConnectDB{
     public void NeighborsUpdate(List<Country> countries) throws SQLException {
         Statement st = conn.createStatement();
         st.execute("CREATE TABLE temp ("

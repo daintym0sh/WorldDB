@@ -1,4 +1,4 @@
-package main.doa;
+package main.dao;
 
 import main.datasources.worldbank.WorldBankData;
 import main.domain.Country;
@@ -12,7 +12,7 @@ import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
 
-public class PopulationDOA extends ConnectDB{
+public class PopulationDAO extends ConnectDB{
     public void PopulationUpdate(List<Country> countries) throws ParserConfigurationException, SAXException, IOException, JAXBException, SQLException {
         Statement st = conn.createStatement();
         st.execute("CREATE TABLE temp ("
