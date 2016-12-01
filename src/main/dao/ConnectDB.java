@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * Connects to PostgreSQL database, inherited by all DAO classes
+ */
 public class ConnectDB {
     Connection conn;
     private final String DATABASE = "WorldDB";

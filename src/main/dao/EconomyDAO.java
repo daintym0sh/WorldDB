@@ -12,7 +12,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
-
+/**
+ *The DAO for updating the economy relation in persistent storage
+ */
 public class EconomyDAO extends ConnectDB {
     public void economyUpdate(List<Country> countries) throws ParserConfigurationException, SAXException, IOException, JAXBException, SQLException {
         Statement st = conn.createStatement();

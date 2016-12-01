@@ -13,20 +13,20 @@ import java.util.regex.Pattern;
 
 public class FactbookExtract {
 
-    private String fieldURL;
-    private String[] values;
+    private String fieldURL = null;
+    private String[] values = null;
     private List<String[]> pairs;
-    private Pattern pattern;
-    private Matcher matcher;
+    private Pattern pattern = null;
+    private Matcher matcher = null;
     private String latREGEX = "(\\d+\\s\\d+\\s(N|S)){1}";
     private String lonREGEX = "(\\d+\\s\\d+\\s(E|W)){1}";
-    private String lat;
-    private String lon;
-    private String value;
+    private String lat = null;
+    private String lon = null;;
+    private String value = null;;
     private String demogrREGEX = "((\\D+\\s+)+)(?=\\d+\\.?\\d*%)";
     private String percentREGEX = "\\d+\\.?\\d*(?=%)";
-    private String demogr;
-    private String percent;
+    private String demogr = null;
+    private String percent = null;
     private String[] pair = new String[]{"0","0"};
     private String note = ".*(?=\\s*(note|overseas))";
 

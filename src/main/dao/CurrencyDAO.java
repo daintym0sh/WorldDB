@@ -10,7 +10,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
-
+/**
+ *The DAO for updating the currency relation in persistent storage
+ */
 public class CurrencyDAO extends ConnectDB{
     public void currencyUpdate(List<Country> countries) throws ParserConfigurationException, SAXException, IOException, JAXBException, SQLException {
         Statement st = conn.createStatement();

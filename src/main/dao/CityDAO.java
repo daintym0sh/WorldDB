@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Created by John on 11/15/2016.
+ *The DAO for updating the city relation in persistent storage
  */
 public class CityDAO extends ConnectDB{
 

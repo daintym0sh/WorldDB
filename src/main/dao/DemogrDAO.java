@@ -4,7 +4,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
-
+/**
+ *The super class DAO for updating the demographic relations in persistent storage
+ */
 public class DemogrDAO extends ConnectDB {
     public void demographicTemp() throws SQLException {
         Statement st = conn.createStatement();

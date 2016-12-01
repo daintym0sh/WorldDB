@@ -6,6 +6,9 @@ import main.datasources.unece.UneceCity;
 
 import java.util.List;
 
+/**
+ * The domain or transfer object responsible for carrying data between the data sources and persistent storage
+ */
 public class Country {
     private GeoInfoCountry info;
     private String[] location;

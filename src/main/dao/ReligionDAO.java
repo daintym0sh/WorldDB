@@ -5,7 +5,9 @@ import main.domain.Country;
 import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.List;
-
+/**
+ *The DAO for updating the religion relation in persistent storage
+ */
 public class ReligionDAO extends DemogrDAO {
     private String type = "religion";
     public void religionUpdate(List<Country> countries) throws SQLException {

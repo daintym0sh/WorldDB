@@ -7,6 +7,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "country")
+/**
+ * The country element in the Geonames Countryinfo XML, returned by the Geonames API
+ */
 public class GeoInfoCountry {
     
     @XmlElement(name="countryName")

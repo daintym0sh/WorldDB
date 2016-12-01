@@ -7,7 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
-
+/**
+ *The DAO for updating the neighbor relation in persistent storage
+ */
 public class NeighborsDAO extends ConnectDB{
     public void NeighborsUpdate(List<Country> countries) throws SQLException {
         Statement st = conn.createStatement();

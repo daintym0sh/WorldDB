@@ -2,9 +2,6 @@ package main.domain;
 
 import java.util.List;
 
-/**
- * Created by John on 11/15/2016.
- */
 public class CountryDemogr {
     private List<String[]> language;
     private List<String[]> religion;

@@ -10,7 +10,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
-
+/**
+ *The DAO for updating the country relation in persistent storage
+ */
 public class CountryDAO extends ConnectDB {
 
     public void countryUpdate(List<Country> countries) throws ParserConfigurationException, SAXException, IOException, JAXBException, SQLException {

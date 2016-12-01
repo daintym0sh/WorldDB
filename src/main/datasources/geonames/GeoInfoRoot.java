@@ -9,6 +9,9 @@ import java.util.List;
  
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "geonames")
+/**
+ * The root element in the Geonames Countryinfo XML, returned by the Geonames API
+ */
 public class GeoInfoRoot {
      
     @XmlElement(name = "country", type = GeoInfoCountry.class)
