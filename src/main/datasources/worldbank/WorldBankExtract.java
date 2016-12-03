@@ -11,10 +11,20 @@ public class WorldBankExtract {
     
     private String restRequest;
 
+    /**
+     * Constructor
+     * @param restRequest is the URL used to make a REST request to the World Bank API
+     */
     public WorldBankExtract(String restRequest) {
         this.restRequest = restRequest;
     }
-    
+
+    /**
+     * This method unmarshalls the World Bank indicator XML data
+     * @return a Lost of WorldBankData holding the data of interest from the REST response
+     * @throws JAXBException
+     * @throws IOException
+     */
     public List<WorldBankData> extractData() throws JAXBException, IOException{
         URL xmlData = new URL(restRequest);
         JAXBContext jc = JAXBContext.newInstance(WorldBankRoot.class);

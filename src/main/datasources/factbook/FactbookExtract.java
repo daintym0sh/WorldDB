@@ -11,31 +11,32 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * This class is used to extract data from the CIA Factbook data source
+ */
 public class FactbookExtract {
 
     private String fieldURL = null;
     private String[] values = null;
-    private List<String[]> pairs;
-    private Pattern pattern = null;
-    private Matcher matcher = null;
-    private String latREGEX = "(\\d+\\s\\d+\\s(N|S)){1}";
-    private String lonREGEX = "(\\d+\\s\\d+\\s(E|W)){1}";
-    private String lat = null;
-    private String lon = null;;
-    private String value = null;;
-    private String demogrREGEX = "((\\D+\\s+)+)(?=\\d+\\.?\\d*%)";
-    private String percentREGEX = "\\d+\\.?\\d*(?=%)";
-    private String demogr = null;
-    private String percent = null;
-    private String[] pair = new String[]{"0","0"};
-    private String note = ".*(?=\\s*(note|overseas))";
 
+    /**
+     * Constructor
+     * @param fieldURL a String containing the URL pointing to the location of the html file containing the data of
+     *                 interest. The CIA Factbook holds all of its
+     */
     public FactbookExtract(String fieldURL) {
         this.fieldURL = fieldURL;
     }
 
+    /**
+     * This method finds and extracts the section data in a field html file corresponding to a FIPS country code.
+     * @param fips is a country code referring to a country
+     * @return a String containing the section of data corresponding to the FIPS country code
+     * @throws IOException
+     */
     public String connect(String fips) throws IOException {
         if(fips.isEmpty()==false) {
+            String value = null;
             File input = new File(fieldURL);
             Document doc = Jsoup.parse(input, "UTF-8");
             Elements tables = doc.select("table[id=" + fips + "]");
@@ -50,9 +51,22 @@ public class FactbookExtract {
             return null;
         }
     }
-    
+
+    /**
+     * This method extracts latitude and longitude corresponding to a FIPS country code
+     * @param fips is a country code referring to a country
+     * @return a String array containing the latitude (index: 0) and longitude (index: 1)
+     * @throws IOException
+     */
     public String[] extractCountryLoc(String fips) throws IOException{
-        value = connect(fips);
+        String value = connect(fips);
+        String lat = null;
+        String latREGEX = "(\\d+\\s\\d+\\s(N|S)){1}";
+        String lon = null;
+        String lonREGEX = "(\\d+\\s\\d+\\s(E|W)){1}";
+        Pattern pattern;
+        Matcher matcher;
+        String[] pair = new String[]{"0","0"};
         if(value!=null){
             pattern = Pattern.compile(latREGEX);
             matcher = pattern.matcher(value);
@@ -92,9 +106,20 @@ public class FactbookExtract {
         }        
     }
 
+    /**
+     * This method extracts demographic data corresponding to a FIPS country code
+     * @param fips is a country code referring to a country
+     * @return an ArrayList of String arrays containing demographic data. The String arrays are of length with length 2
+     *               (index 0: demographic, index 1: population percent)
+     * @throws IOException
+     */
     public List<String[]> extractDemogr(String fips) throws IOException {
-        value = connect(fips);
-        pairs = new ArrayList<>();
+        String value = connect(fips);
+        Pattern pattern;
+        Matcher matcher;
+        String[] pair = new String[]{"0","0"};
+        List<String[]> pairs = new ArrayList<>();
+        String note = ".*(?=\\s*(note|overseas))";
         if(value!=null){
             value = value.replaceAll("\\(unknown\\)","unknown");
             value = value.replaceAll("\\(.+?\\)","");
@@ -111,6 +136,10 @@ public class FactbookExtract {
             }
             values = value.split(", ");
             List<String> count = new ArrayList<>();
+            String demogr = null;
+            String demogrREGEX = "((\\D+\\s+)+)(?=\\d+\\.?\\d*%)";
+            String percent = null;
+            String percentREGEX = "\\d+\\.?\\d*(?=%)";
             for(String e : values){
                 if(e.contains("%")==true&&e.length()<75){
                     pattern = Pattern.compile(demogrREGEX);

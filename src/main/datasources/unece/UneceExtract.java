@@ -9,7 +9,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is used to extract city data from the UN/LOCODE CSV file
+ */
 public class UneceExtract {
+
+    /**
+     * This method extracts city data from the UN/LOCODE CSV and creates objects with this data for each city
+     * @return a List of UneceCity objects containing data from the UN/LOCODE data source
+     * @throws IOException
+     * @throws JAXBException
+     */
     public List<UneceCity> extractCity() throws IOException, JAXBException {
         CSVReader reader = new CSVReader(new FileReader("data/CodeList.csv"));
         String [] nextLine;

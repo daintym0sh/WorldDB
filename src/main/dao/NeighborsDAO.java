@@ -3,15 +3,24 @@ package main.dao;
 import main.datasources.geonames.GeoNeighborCountry;
 import main.domain.Country;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
 /**
- *The DAO for updating the neighbor relation in persistent storage
+ *The DAO class for updating the neighbor relation in persistent storage
  */
 public class NeighborsDAO extends ConnectDB{
-    public void NeighborsUpdate(List<Country> countries) throws SQLException {
+    /**
+     *This method is used to update the Neighbors relation with respect to source data. The method does not implement
+     * deletion - it can only add data to the corresponding relation.
+     * @param countries is a list of transfer objects
+     * @throws SQLException
+     * @throws ClassNotFoundException
+     */
+    public void NeighborsUpdate(List<Country> countries) throws SQLException, ClassNotFoundException {
+        Connection conn = connect();
         Statement st = conn.createStatement();
         st.execute("CREATE TABLE temp ("
                 + "country_code character varying,"
@@ -48,5 +57,6 @@ public class NeighborsDAO extends ConnectDB{
                 + "DROP TABLE temp;"
         );
         st.close();
+        conn.close();
     }
 }

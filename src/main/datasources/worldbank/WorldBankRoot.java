@@ -7,6 +7,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The root element in a World Bank indicator XML REST response, returned by the World Bank API
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
 public class WorldBankRoot {

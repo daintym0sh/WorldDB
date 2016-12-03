@@ -5,6 +5,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * The data of interest from a country element in a World Bank indicator XML REST response, returned by the World Bank API
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "country")
 public class WorldBankCountry {

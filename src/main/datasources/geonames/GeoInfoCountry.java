@@ -5,19 +5,19 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * The data of interest from a country element in the Geonames Countryinfo XML REST response, returned by the Geonames API
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "country")
-/**
- * The country element in the Geonames Countryinfo XML, returned by the Geonames API
- */
 public class GeoInfoCountry {
-    
+
     @XmlElement(name="countryName")
     private String country_name;
     @XmlElement(name="countryCode")
-    private String code_a2;    
+    private String code_a2;
     @XmlElement(name="isoAlpha3")
-    private String code_a3;    
+    private String code_a3;
     @XmlElement(name="isoNumeric")
     private String code_num;
     @XmlElement(name="areaInSqKm")
@@ -58,7 +58,7 @@ public class GeoInfoCountry {
     public String getFips() {
         return fips;
     }
-    
+
     public String getContinent() {
         return continent;
     }
@@ -67,4 +67,3 @@ public class GeoInfoCountry {
         return currency;
     }
 }
-

@@ -15,34 +15,24 @@ public class Runner{
     public static void main(String[] args) throws SQLException, ParserConfigurationException, JAXBException, SAXException, IOException, ClassNotFoundException {
         List<Country> countries = new CountryBuild().extractCountry();
         CountryDAO countrydao = new CountryDAO();
-        countrydao.connect();
         countrydao.countryUpdate(countries);
         EthnicityDAO ethnicitydao = new EthnicityDAO();
-        ethnicitydao.connect();
         ethnicitydao.ethnicityUpdate(countries);
         LanguageDAO languagedao = new LanguageDAO();
-        languagedao.connect();
         languagedao.ethnicityUpdate(countries);
         ReligionDAO religiondao = new ReligionDAO();
-        religiondao.connect();
         religiondao.religionUpdate(countries);
         CityDAO cityDAO = new CityDAO();
-        cityDAO.connect();
         cityDAO.cityUpdate(countries);
         EconomyDAO economydao = new EconomyDAO();
-        economydao.connect();
         economydao.economyUpdate(countries);
         PopulationDAO populationdao = new PopulationDAO();
-        populationdao.connect();
         populationdao.PopulationUpdate(countries);
         NeighborsDAO neighborsdao = new NeighborsDAO();
-        neighborsdao.connect();
         neighborsdao.NeighborsUpdate(countries);
         ContinentDAO continentdao = new ContinentDAO();
-        continentdao.connect();
         continentdao.continentUpdate(countries);
         CurrencyDAO currencyDAO = new CurrencyDAO();
-        currencyDAO.connect();
         currencyDAO.currencyUpdate(countries);
     }
 }

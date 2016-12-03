@@ -7,10 +7,19 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
+/**
+ * The class is used to unmarshall XML data from the Geonames REST webservice
+ */
 public class GeoInfoExtract {
 
-    private final String restRequest = "http://api.geonames.org/countryInfo?username=meierj15";
+    private static String restRequest = "http://api.geonames.org/countryInfo?username=meierj15";
 
+    /**
+     * This method unmarshalls the Geonames XML data into GeoInfoCountry objects and returns them in an ArrayList
+     * @return an ArrayList of GeoInfoCountry objects
+     * @throws JAXBException
+     * @throws MalformedURLException
+     */
     public List<GeoInfoCountry> extractInfo() throws JAXBException, MalformedURLException{
         JAXBContext jc = JAXBContext.newInstance(GeoInfoRoot.class);
         Unmarshaller u = jc.createUnmarshaller();
@@ -19,3 +28,4 @@ public class GeoInfoExtract {
         return data.getCountryData();
     }  
 }
+

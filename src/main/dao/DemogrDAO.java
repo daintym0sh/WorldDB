@@ -1,14 +1,22 @@
 package main.dao;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
 /**
- *The super class DAO for updating the demographic relations in persistent storage
+ *The super class for DAO's used to interact with relations in persistent storage that
+ * contain demographic data from the CIA Factbook
  */
 public class DemogrDAO extends ConnectDB {
-    public void demographicTemp() throws SQLException {
+    /**
+     * This method creates a temporary table used for updating a relation
+     * @throws SQLException
+     * @throws ClassNotFoundException
+     */
+    public void demographicTemp() throws SQLException, ClassNotFoundException {
+        Connection conn = connect();
         Statement st = conn.createStatement();
         st.execute("CREATE TABLE temp(" +
                 "code character varying," +
@@ -17,8 +25,18 @@ public class DemogrDAO extends ConnectDB {
                 "PRIMARY KEY(code,demogr)" +
                 ");");
         st.close();
+        conn.close();
     }
-    public void demographicAdd(String code, List<String[]> demogr) throws SQLException {
+
+    /**
+     * This method inserts the data held by the transfer objects into the temporary table used for the update
+     * @param conn is the connection object to connect with the database
+     * @param code is the type referring the demographic of interest
+     * @param demogr is the list of demographic data as a String array with length 2
+     *               (index 0: demographic, index 1: population percent)
+     * @throws SQLException
+     */
+    public void demographicAdd(Connection conn, String code, List<String[]> demogr) throws SQLException {
         Statement st = conn.createStatement();
         Iterator<String[]> it = demogr.iterator();
         while(it.hasNext()){
@@ -39,9 +57,17 @@ public class DemogrDAO extends ConnectDB {
                         ");"
             );
         }
+        st.close();
     }
 
-    public void add(String type) throws SQLException {
+    /**
+     * This method updates a table residing in persistent storage with the data in the newly created temporary table
+     * @param type is the type referring the demographic of interest
+     * @throws SQLException
+     * @throws ClassNotFoundException
+     */
+    public void add(String type) throws SQLException, ClassNotFoundException {
+        Connection conn = connect();
         Statement st = conn.createStatement();
         st.execute("INSERT INTO " + type +
                 "  (SELECT temp.code,temp.demogr,temp.percent" +
@@ -53,5 +79,6 @@ public class DemogrDAO extends ConnectDB {
                 "DROP TABLE temp;"
         );
         st.close();
+        conn.close();
     }
 }

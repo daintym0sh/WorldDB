@@ -1,3 +1,6 @@
+/**
+ * Namespace information for the World Bank XML data
+ */
 @XmlSchema(
         namespace="http://www.worldbank.org",
         elementFormDefault=XmlNsForm.QUALIFIED)

@@ -1,5 +1,8 @@
 package main.datasources.unece;
 
+/**
+ * This class is used to define UneceCity objects
+ */
 public class UneceCity {
 
     private final String code_a2;

@@ -7,6 +7,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The root element in the Geonames Neighbors XML REST response, returned by the Geonames API
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "geonames")
 public class GeoNeighborRoot {

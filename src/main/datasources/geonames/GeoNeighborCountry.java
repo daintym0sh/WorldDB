@@ -10,6 +10,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * The data of interest from a geoname element in the Geonames Neighbors XML REST response, returned by the Geonames API
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "geoname")
 public class GeoNeighborCountry {
