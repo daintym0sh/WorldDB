@@ -3,6 +3,8 @@ package test;
 import main.datasources.factbook.FactbookExtract;
 import main.datasources.geonames.GeoInfoCountry;
 import main.datasources.geonames.GeoInfoExtract;
+import main.domain.Country;
+
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.Iterator;
@@ -22,11 +24,12 @@ class FactbookExtractTest {
         FactbookExtract l = new FactbookExtract(lang);
         FactbookExtract r = new FactbookExtract(rel);
 
-        //while(it.hasNext()){
-            //String fips = it.next().getFips();
-            for(String[] p : e.extractDemogr("gb")){
-                System.out.println(p[0] + " " + p[1]);
+        while(it.hasNext()){
+            GeoInfoCountry c = it.next();
+            String fips = c.getFips();
+            for(String[] p : l.extractDemogr(fips)){
+                System.out.println(p[0] + "      " + p[1]);
             }
-        //}
+        }
     }
 }

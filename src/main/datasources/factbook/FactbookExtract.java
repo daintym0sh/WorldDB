@@ -136,9 +136,9 @@ public class FactbookExtract {
             }
             values = value.split(", ");
             List<String> count = new ArrayList<>();
-            String demogr = null;
+            String demogr = "0";
             String demogrREGEX = "((\\D+\\s+)+)(?=\\d+\\.?\\d*%)";
-            String percent = null;
+            String percent = "0";
             String percentREGEX = "\\d+\\.?\\d*(?=%)";
             for(String e : values){
                 if(e.contains("%")==true&&e.length()<75){

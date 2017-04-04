@@ -74,7 +74,6 @@ public class EconomyDAO extends ConnectDB {
                 double uValue = u.stream()
                         .filter(WorldBankData -> WorldBankData.getDate()==gdp.getDate())
                         .findFirst().orElse(new WorldBankData()).getValue();
-                System.out.println(iValue + " " + sValue + " " + infValue + " " + uValue);
 
                 st.execute("INSERT INTO temp ("
                                 + "country_code,"

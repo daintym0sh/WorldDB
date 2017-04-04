@@ -53,9 +53,9 @@ public class CountryBuild {
             List<UneceCity> c = cities.stream().filter(uneceCity -> uneceCity.getCode_a2().contains(code_a2)).collect(Collectors.toList());
             List<GeoNeighborCountry> neighbors = new GeoNeighborExtract().extractNeighbor(code_a2);
             CountryDemogr demographicData = new CountryDemogr(
-                    ethn.extractDemogr(fips),
                     lang.extractDemogr(fips),
-                    rel.extractDemogr(fips));
+                    rel.extractDemogr(fips),
+                    ethn.extractDemogr(fips));
             CountryTime timeData = new CountryTime(
                     population.stream().filter(WorldBankData -> WorldBankData.getCode_a2().contains(code_a2)).collect(Collectors.toList()),
                     growth.stream().filter(WorldBankData -> WorldBankData.getCode_a2().contains(code_a2)).collect(Collectors.toList()),

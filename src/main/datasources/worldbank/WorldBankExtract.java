@@ -21,7 +21,7 @@ public class WorldBankExtract {
 
     /**
      * This method unmarshalls the World Bank indicator XML data
-     * @return a Lost of WorldBankData holding the data of interest from the REST response
+     * @return a List of WorldBankData holding the data of interest from the REST response
      * @throws JAXBException
      * @throws IOException
      */

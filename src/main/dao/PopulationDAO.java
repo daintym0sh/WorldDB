@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class PopulationDAO extends ConnectDB{
     /**
-     * This method is used to update the CountryPopulation relation with respect to source data. The method does not implement
+     * This method is used to update the Countrypop relation with respect to source data. The method does not implement
      * deletion - it can only add data to the corresponding relation.
      * @param countries is a list of transfer objects
      * @throws ParserConfigurationException
@@ -75,14 +75,14 @@ public class PopulationDAO extends ConnectDB{
                 );
             }
         }
-        st.execute("INSERT INTO countrypopulation" +
+        st.execute("INSERT INTO countrypop" +
                 "  (SELECT temp.country_code,temp.year,temp.population,temp.growth_rate,temp.mortality_rate" +
                 "   FROM temp" +
-                "   LEFT OUTER JOIN countrypopulation" +
-                "   ON temp.country_code=countrypopulation.country_code" +
-                "   AND temp.year=countrypopulation.year" +
-                "   WHERE countrypopulation.country_code IS NULL" +
-                "   OR countrypopulation.year IS NULL" +
+                "   LEFT OUTER JOIN countrypop" +
+                "   ON temp.country_code=countrypop.country_code" +
+                "   AND temp.year=countrypop.year" +
+                "   WHERE countrypop.country_code IS NULL" +
+                "   OR countrypop.year IS NULL" +
                 "   );" +
                 "DROP TABLE temp;"
         );

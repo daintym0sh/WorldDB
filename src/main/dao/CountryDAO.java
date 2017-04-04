@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class CountryDAO extends ConnectDB {
     /**
-     *This method is used to update the Country relation with respect to source data. The method does not implement
+     * This method is used to update the Country relation with respect to source data. The method does not implement
      * deletion - it can only add data to the corresponding relation.
      * @param countries is a list of transfer objects
      * @throws ParserConfigurationException
@@ -34,6 +34,8 @@ public class CountryDAO extends ConnectDB {
                 + "name character varying,"
                 + "area numeric,"
                 + "capital character varying,"
+                + "continent character varying,"
+                + "currency character varying,"
                 + "latitude numeric,"
                 + "longitude numeric"
                 + ");"
@@ -47,6 +49,8 @@ public class CountryDAO extends ConnectDB {
             double area = c.getInfo().getArea();
             String capital = c.getInfo().getCapital();
             capital=capital.replaceAll("'","''");
+            String continent = c.getInfo().getContinent();
+            String currency = c.getInfo().getCurrency();
             double latitude = Double.parseDouble(c.getLocation()[0]);
             double longitude = Double.parseDouble(c.getLocation()[1]);
 
@@ -55,6 +59,8 @@ public class CountryDAO extends ConnectDB {
                     + "name,"
                     + "area,"
                     + "capital,"
+                    + "continent,"
+                    + "currency,"
                     + "latitude,"
                     + "longitude"
                     + ")"
@@ -63,6 +69,8 @@ public class CountryDAO extends ConnectDB {
                     + "'" + name + "',"
                     + "'" + area + "',"
                     + "'" + capital + "',"
+                    + "'" + continent + "',"
+                    + "'" + currency + "',"
                     + "'" + latitude + "',"
                     + "'" + longitude + "'"
                     + ");"
@@ -70,7 +78,7 @@ public class CountryDAO extends ConnectDB {
 
         }
         st.execute("INSERT INTO country" +
-                "  (SELECT temp.code,temp.name,temp.area,temp.capital,temp.latitude,temp.longitude" +
+                "  (SELECT temp.code,temp.name,temp.area,temp.capital,temp.continent,temp.currency,temp.latitude,temp.longitude" +
                 "   FROM temp" +
                 "   LEFT OUTER JOIN country" +
                 "   ON temp.code=country.code" +
